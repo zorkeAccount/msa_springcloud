@@ -1,12 +1,12 @@
-#eureka 服务注册中心地址
+#eureka 鏈嶅姟娉ㄥ唽涓績鍦板潃
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-#client服务端口
+#client鏈嶅姟绔彛
 server:
   port: 8762
-#client服务name
+#client鏈嶅姟name
 spring:
   application:
-    name: service-hi
+    name: service-provider

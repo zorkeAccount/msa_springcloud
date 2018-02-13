@@ -1,5 +1,5 @@
 # service-ribbon
-* service-ribbon是一个服务消费者，对eureka-client提供的服务进行消费
+* service-ribbon是一个服务消费者，对eureka-client提供的服务进行消费，一种ribbon+restTemplate的服务调用方式
 
 * 在启动service-ribbon应用之前，先启动eureka-register应用，并且分别在8762和8763两个端口上启动应用eureka-client的两个实例
 
@@ -12,6 +12,6 @@
 4. sercvice-ribbon通过restTemplate调用sercvice-ribbon的hi接口时，因为用ribbon进行了负载均衡，会轮流的调用sercvice-ribbon：8762和8763 两个端口的hi接口
 
 ### 工程创建过程
-右键service工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Discovery -> Finish
+右键service工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Discovery 和 Ribbon -> Finish
 
 

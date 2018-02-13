@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.caizhaoke</groupId>
-    <artifactId>eureka-client</artifactId>
+    <artifactId>service-provider</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>eureka-client</name>
-    <description>Eureka Client project for Spring Boot</description>
+    <name>service-provider</name>
+    <description>Service Provider project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
