@@ -5,9 +5,9 @@
 &nbsp;&nbsp;eureka服务注册中心
 
 * service-provider<br>
-&nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，且为service-ribbon提供服务
+&nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，且为service-consumer-ribbon提供服务
 
-* service-ribbon<br>
+* service-consumer-ribbon<br>
 &nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，且调用eureka-client中的服务
 
 #### 注意：

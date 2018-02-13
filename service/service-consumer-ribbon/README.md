@@ -1,7 +1,7 @@
-# service-ribbon
-* service-ribbon是一个服务消费者，对eureka-client提供的服务进行消费，一种ribbon+restTemplate的服务调用方式
+# service-consumer-ribbon
+* service-consumer-ribbon是一个服务消费者，对eureka-client提供的服务进行消费，一种ribbon+restTemplate的服务调用方式
 
-* 在启动service-ribbon应用之前，先启动eureka-register应用，并且分别在8762和8763两个端口上启动应用eureka-client的两个实例
+* 在启动service-consumer-ribbon应用之前，先启动eureka-register应用，并且分别在8762和8763两个端口上启动应用eureka-client的两个实例
 
 * 浏览器中多次访问[http://localhost:8764/hi?name=czk](http://localhost:8764/hi?name=czk)，会发现端口号8762和8763交替显示
 
@@ -13,5 +13,10 @@
 
 ### 工程创建过程
 右键service工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Discovery 和 Ribbon -> Finish
+
+#### 官方文档
+* [spring-cloud-ribbon](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-ribbon)
+* [spring-cloud-ribbon](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-ribbon)
+
 
 
