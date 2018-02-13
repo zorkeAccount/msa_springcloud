@@ -8,7 +8,7 @@ eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己�
 * 启动工程访问[http://localhost:8761](http://localhost:8761)，即可访问注册中心管理页面
 
 ### 工程创建过程
-右键eureka工程->new model-> 选择spring initialir -> 填好基本pom信息 -> 选择Eureka Server -> Finish
+右键eureka工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Server -> Finish
 
 ### 官方文档
 * [spring-cloud-eureka-server](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-eureka-server)

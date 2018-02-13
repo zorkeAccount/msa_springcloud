@@ -8,7 +8,7 @@ URL、主页等；Euraka&nbsp;从每个client实例接收心跳消息，如果�
 [http://localhost:8762/hi?name=zorke](http://localhost:8762/hi?name=zorke)
 
 ### 工程创建过程
-右键eureka工程->new model-> 选择spring initialir -> 填好基本pom信息 -> 选择Eureka Discovery -> Finish
+右键eureka工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Discovery -> Finish
 
 ### 官方文档
 * [service_discovery_eureka_clients](http://projects.spring.io/spring-cloud/spring-cloud.html#_service_discovery_eureka_clients)
