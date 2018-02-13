@@ -7,15 +7,14 @@
 
 ### 项目说明
 1. 一个服务注册中心，eureka server,端口为8761
-2. eureka-client工程跑了两个实例，端口分别为8762,8763，分别向服务注册中心注册,并作为服务提供者对sercvice-ribbon提供服务
-3. sercvice-ribbon端口为8764,向服务注册中心注册，并作为服务消费者调用eureka-client中的服务
-4. sercvice-ribbon通过restTemplate调用sercvice-ribbon的hi接口时，因为用ribbon进行了负载均衡，会轮流的调用sercvice-ribbon：8762和8763 两个端口的hi接口
+2. eureka-client工程跑了两个实例，端口分别为8762,8763，分别向服务注册中心注册,并作为服务提供者对service-consumer-ribbon提供服务
+3. service-consumer-ribbon端口为8764,向服务注册中心注册，并作为服务消费者调用eureka-client中的服务
+4. service-consumer-ribbon通过restTemplate调用service-consumer-ribbon的hi接口时，因为用ribbon进行了负载均衡，会轮流的调用service-consumer-ribbon：8762和8763 两个端口的hi接口
 
 ### 工程创建过程
 右键service工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Discovery 和 Ribbon -> Finish
 
 #### 官方文档
-* [spring-cloud-ribbon](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-ribbon)
 * [spring-cloud-ribbon](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-ribbon)
 
 
