@@ -1,10 +1,11 @@
+#eureka server url-post
 server:
   port: 8761
-
-#[默认情况下eurekaserver也是一个eurekaclient,必须指定一个server]
 eureka:
+  #eureka server url-host
   instance:
     hostname: localhost
+  #[默认情况下eurekaserver也是一个eurekaclient,必须指定一个server]
   client:
     #[registerWithEureka: false和fetchRegistry: false表明当前应用是一个eureka server]
     registerWithEureka: false
