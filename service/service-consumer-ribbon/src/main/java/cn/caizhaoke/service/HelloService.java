@@ -25,6 +25,6 @@ public class HelloService {
     }
 
     public String hiError(String name) {
-        return "hi," + name + ",sorry,error" + " from the service-consumer-feign!";
+        return "hi," + name + ",sorry,error" + " from the service-consumer-ribbon!";
     }
 }

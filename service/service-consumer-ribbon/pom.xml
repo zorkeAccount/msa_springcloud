@@ -43,16 +43,38 @@
             <scope>test</scope>
         </dependency>
 
-        <!--添加依赖：spring-boot-starter-web-->
+        <!--spring-boot-starter-web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!--断路器hystrix-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
+
+        <!--断路器仪表盘hystrix-dashboard-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
+        <!--该依赖若不添加会出现：断路器仪表盘hystrix-dashboard访问http://localhost:8764/hystrix.stream报错"Unable to connect to Command Metric Stream."问题-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--for断路器仪表盘hystrix-dashboard访问http://localhost:8764/hystrix.stream报错"Unable to connect to Command Metric Stream."问题 -->
+        <!-- <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-netflix-hystrix-stream</artifactId>
+         </dependency>
+         <dependency>
+             <groupId>org.springframework.cloud</groupId>
+             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+         </dependency>-->
+
     </dependencies>
 
     <dependencyManagement>

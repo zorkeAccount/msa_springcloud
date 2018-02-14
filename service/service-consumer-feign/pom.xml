@@ -47,6 +47,23 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--Feign是自带断路器,因此无需再次引入hystrix，下面只需要引入仪表盘即可-->
+        <!--断路器仪表盘hystrix-dashboard-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
+        <!--尽管feign已集成hystrix，但是若不添加该依赖，仪表盘hystrix-dashboard访问http://localhost:8764/hystrix.stream报错"Unable to connect to Command Metric Stream."问题-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <!--若不添加该依赖，仪表盘hystrix-dashboard访问http://localhost:8764/hystrix.stream报错"Unable to connect to Command Metric Stream."问题-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
