@@ -19,6 +19,10 @@ http请求地址和资源文件映射如下:
 
 * 注意yml文件的字符格式是否是UTF-8，以及如果有注释的话可能会报异常！！！！
 
+* rabbitmq消息总线刷新配置文件：修改msa_springcloud_configfiles\respo\test-dev.properties文件后提交，-> 访问/test/dev值并未改变（其实改变了！！）
+-> http://localhost:8888/bus/refresh【?destination=configClient:2008可指定需要更新的实例】,Config-Server收到通知之后，就会广播配置文件改变的消息 -> 此时就能看得到修改后的配置文件
+
+
 ### 工程创建过程
 右键service工程->new model-> 选择spring initializr -> 填好基本pom信息 -> 选择Eureka Discovery 和 Config Server -> Finish
 

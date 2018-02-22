@@ -28,9 +28,15 @@
     </properties>
 
     <dependencies>
+        <!--define config client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!--for rabbitmq动态实现配置文件的刷新-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
 
         <dependency>
