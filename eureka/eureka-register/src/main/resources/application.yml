@@ -5,9 +5,9 @@ eureka:
   #eureka server url-host
   instance:
     hostname: localhost
-  #[默认情况下eurekaserver也是一个eurekaclient,必须指定一个server]
+  #[榛樿鎯呭喌涓媏urekaserver涔熸槸涓�涓猠urekaclient,蹇呴』鎸囧畾涓�涓猻erver]
   client:
-    #[registerWithEureka: false和fetchRegistry: false表明当前应用是一个eureka server]
+    #[registerWithEureka: false鍜宖etchRegistry: false琛ㄦ槑褰撳墠搴旂敤鏄竴涓猠ureka server]
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:

@@ -7,4 +7,11 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        service-id: config-server
+      #uri: http://localhost:8888/ #改成通过eureka服务注册中心从配置中心读取文件,也即上述的discovery配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
