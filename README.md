@@ -29,3 +29,5 @@ service-consumer-ribbon:[http://localhost:8764/hi?name=zorke](http://localhost:8
 service-consumer-feign:[http://localhost:8765/hi?name=zorke](http://localhost:8765/hi?name=zorke)<br>
 
 zuul-api:[http://localhost:8769/api-a/hi?name=zorke&token=22](http://localhost:8769/api-a/hi?name=zorke&token=22)<br>
+
+sleuth-zipkin-server:[http://localhost:9411/zipkin/](http://localhost:9411/zipkin/) 点击“查找”可以查看服务调用链<br>

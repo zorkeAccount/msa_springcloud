@@ -13,10 +13,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrix //开启断路器Hystrix
 @EnableEurekaClient //向eureka服务注册中心进行注册 或@EnableDiscoveryClient（若非eureka提供注册中心则使用该注解）
 @SpringBootApplication
-public class ServiceRibbonApplication {
+public class ServiceConsumerRibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceRibbonApplication.class, args);
+        SpringApplication.run(ServiceConsumerRibbonApplication.class, args);
     }
 
     //向程序的ioc注入一个bean: restTemplate，并通过@LoadBalanced注解表明这个restTemplate开启负载均衡的功能
