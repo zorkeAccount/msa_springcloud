@@ -24,6 +24,8 @@ config-server:[http://localhost:8888/test/dev](http://localhost:8888/test/dev)<b
 
 service-provider:[http://localhost:8762/hi?name=zorke](http://localhost:8762/hi?name=zorke)<br>
 service-provider:[http://localhost:8763/hi?name=zorke](http://localhost:8763/hi?name=zorke)<br>
+
 service-consumer-ribbon:[http://localhost:8764/hi?name=zorke](http://localhost:8764/hi?name=zorke)<br>
 service-consumer-feign:[http://localhost:8765/hi?name=zorke](http://localhost:8765/hi?name=zorke)<br>
-zuul:[http://localhost:8769/api-a/hi?name=zorke&token=22](http://localhost:8769/api-a/hi?name=zorke&token=22)<br>
+
+zuul-api:[http://localhost:8769/api-a/hi?name=zorke&token=22](http://localhost:8769/api-a/hi?name=zorke&token=22)<br>
