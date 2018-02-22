@@ -1,26 +1,26 @@
-# Ö¸¶¨·şÎñ×¢²áÖĞĞÄµØÖ·
+# æŒ‡å®šæœåŠ¡æ³¨å†Œä¸­å¿ƒåœ°å€
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-# ¸Ã·şÎñ¶Ë¿ÚºÅ
+# è¯¥æœåŠ¡ç«¯å£å·
 server:
   port: 8769
 
-# ¸Ã·şÎñÃû³Æ
+# è¯¥æœåŠ¡åç§°
 spring:
   application:
     name: zuul
 
-# Â·ÓÉÅäÖÃÊµÏÖzuulµÄÂ·ÓÉ×÷ÓÃ¹¦ÄÜ
+# è·¯ç”±é…ç½®å®ç°zuulçš„è·¯ç”±ä½œç”¨åŠŸèƒ½
 zuul:
   routes:
-    # ÒÔ/api-a/ ¿ªÍ·µÄÇëÇó¶¼×ª·¢¸øservice-consumer-ribbon·şÎñ
+    # ä»¥/api-a/ å¼€å¤´çš„è¯·æ±‚éƒ½è½¬å‘ç»™service-consumer-ribbonæœåŠ¡
     api-a:
       path: /api-a/**
       serviceId: service-consumer-ribbon
-    # ÒÔ/api-b/¿ªÍ·µÄÇëÇó¶¼×ª·¢¸øservice-consumer-feign·şÎñ
+    # ä»¥/api-b/å¼€å¤´çš„è¯·æ±‚éƒ½è½¬å‘ç»™service-consumer-feignæœåŠ¡
     api-b:
       path: /api-b/**
       serviceId: service-consumer-feign

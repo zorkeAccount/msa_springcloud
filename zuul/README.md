@@ -7,8 +7,8 @@
 * 浏览器中分别访问[http://localhost:8769/api-a/hi?name=zorke](http://localhost:8769/api-a/hi?name=zorke)，以及
 [http://localhost:8769/api-a/hi?name=zorke&token=22](http://localhost:8769/api-a/hi?name=zorke&token=22)，（过滤功能）
 
-* 或者（路由功能）：浏览器中分别访问[http://localhost:8769/api-b/hi?name=zorke](http://localhost:8769/api-a/hi?name=zorke)，以及
-[http://localhost:8769/api-b/hi?name=zorke&token=22](http://localhost:8769/api-a/hi?name=zorke&token=22)
+* 或者（路由功能）：浏览器中分别访问[http://localhost:8769/api-b/hi?name=zorke](http://localhost:8769/api-b/hi?name=zorke)，以及
+[http://localhost:8769/api-b/hi?name=zorke&token=22](http://localhost:8769/api-b/hi?name=zorke&token=22)
 
 ### 项目说明
 Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一部分，比如/api/user转发到到user服务，/api/shop转发

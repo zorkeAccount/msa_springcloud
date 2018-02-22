@@ -1,0 +1,10 @@
+server:
+  port: 8769
+spring:
+  application:
+    name: zuul
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8888/
