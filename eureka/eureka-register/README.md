@@ -12,3 +12,4 @@ eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己�
 
 ### 官方文档
 * [spring-cloud-eureka-server](http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-eureka-server)
+* [high_availability_zones_and_regions](http://projects.spring.io/spring-cloud/spring-cloud.html#_high_availability_zones_and_regions)

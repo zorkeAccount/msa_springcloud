@@ -1,0 +1,19 @@
+# 启动命令 java -jar eureka-register-1.0.0.jar --spring.profiles.active=peer1
+#eureka server url-post
+server:
+  port: 8761
+eureka:
+  #eureka server url-host
+  instance:
+    hostname: localhost
+    prefer-ip-address: true  #设置ip让eureka让其他服务注册它
+  #[默认情况下eurekaserver也是一个eurekaclient,必须指定一个server]
+  client:
+    #[registerWithEureka: false和fetchRegistry: false表明当前应用是一个eureka server]
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+spring:
+  profiles:
+    active: peer1
