@@ -9,11 +9,24 @@
 * service-provider<br>
 &nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，且为service-consumer-ribbon提供服务
 
+* config-server<br>
+&nbsp;&nbsp;配置文件管理服务
+
+* service-provider<br>
+&nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，提供相关的功能服务
+
 * service-consumer-ribbon<br>
 &nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，且调用service-provider中的服务，基于ribbon+restTemplate的服务调用方式
-
 * service-consumer-feign<br>
 &nbsp;&nbsp;向eurka服务注册中心进行注册的客户端，且调用service-provider中的服务，基于feign的服务调用方式
+* service-turbine<br>
+&nbsp;&nbsp;对service-consumer-ribbon和service-consumer-feign两个的断路器监控流进行聚合到http://localhost:8901/turbine.stream中
+
+* zuul-api<br>
+&nbsp;&nbsp;网关路由和过滤器功能
+
+* sleuth-zipkin-server<br>
+&nbsp;&nbsp;服务调用链路追踪
 
 #### 注意：
 1. 注册服务的注解：spring cloud中discovery service有许多种实现（eureka、consul、zookeeper等等），@EnableDiscoveryClient基于

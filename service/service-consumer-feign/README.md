@@ -7,6 +7,9 @@
 
 * 浏览器中多次访问[http://localhost:8765/hi?name=czk](http://localhost:8765/hi?name=czk)，会发现端口号8762和8763交替显示
 
+* 浏览器中访问断路器的仪表盘[http://localhost:8765/hystrix](http://localhost:8765/hystrix)，输入http://localhost:8765/hystrix.stream点击Monitor Stream进行监控；
+或者浏览器中直接访问http://localhost:8764/hystrix.stream可查看到具体的数据
+
 ### 项目说明
 1. 一个服务注册中心，eureka server,端口为8761
 2. eureka-client工程跑了两个实例，端口分别为8762,8763，分别向服务注册中心注册,并作为服务提供者对service-consumer-feign提供服务
