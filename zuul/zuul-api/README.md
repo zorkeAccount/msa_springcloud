@@ -1,4 +1,4 @@
-# zuul
+# zuul-api
 * 在SpringCloud微服务系统中，一种常见的负载均衡方式是：客户端的请求首先经过负载均衡（zuul、Ngnix），再到达服务
 网关（zuul集群），然后再到具体的服务；
 

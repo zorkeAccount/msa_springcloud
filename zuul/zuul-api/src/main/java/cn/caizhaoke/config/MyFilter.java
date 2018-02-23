@@ -2,7 +2,8 @@ package cn.caizhaoke.config;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,13 +14,14 @@ import javax.servlet.http.HttpServletRequest;
  * @author zhaoke
  *         Created on 2018/2/22.
  */
-@Slf4j
+//@Slf4j
 @Component
-public class MyFilter extends ZuulFilter {
+public class MyFilter  extends ZuulFilter {
+    private static final Logger log = LoggerFactory.getLogger(MyFilter.class);
 
     @Override
     public String filterType() {
-/*        filterType：
+        /*filterType：
             返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下：
             pre：路由之前
             routing：路由之时

@@ -33,18 +33,24 @@
 spring-cloud-commons, @EnableEurekaClient基于spring-cloud-netflix。简单地说，就是如果选用的注册中心是eureka，
 那么推荐使用@EnableEurekaClient，如果是其他的注册中心就使用@EnableDiscoveryClient
 
-2. 启动顺序：<br>
+2. 在访问zipkin管理页面的时候，在执行查找前一定要仔细看清楚结束时间，而且不要通过浏览器的刷新按钮进行刷新，这是因为浏览器中的url地址
+中/?后面的参数值并未改变，导致刷新不出来最新的服务调用链路信息，应该直接重新访问http://localhost:9411/zipkin/；；此外，并不是所有的服务调用链路均会被zipkin收集到的
+
+3. 启动顺序：<br>
 eureka-register:[http://localhost:8761](http://localhost:8761)，启动方式java -jar eureka-register-1.0.0.jar --spring.profiles.active=peer1<br>
 eureka-register:[http://localhost:8760](http://localhost:8760)，启动方式java -jar eureka-register-1.0.0.jar --spring.profiles.active=peer2<br>
+<br>
+sleuth-zipkin-server:[http://localhost:9411/zipkin/](http://localhost:9411/zipkin/) 点击“查找”可以查看服务调用链-可先访问zuul-api
+再查看，实际显示的时间略微延迟滞后些<br>
+<br>
 config-server:[http://localhost:8888/test/dev](http://localhost:8888/test/dev)<br>
 <br>
-service-provider:[http://localhost:8762/hi?name=zorke](http://localhost:8762/hi?name=zorke)<br>
-service-provider:[http://localhost:8763/hi?name=zorke](http://localhost:8763/hi?name=zorke)<br>
+service-provider:[http://localhost:8762/hi?name=zorke](http://localhost:8762/hi?name=zorke)，启动方式java -jar service-provider-1.0.0.jar<br>
+service-provider:[http://localhost:8763/hi?name=zorke](http://localhost:8763/hi?name=zorke)，启动方式java -jar service-provider-1.0.0.jar --server.port=8763<br>
 <br>
 service-consumer-ribbon:[http://localhost:8764/hi?name=zorke](http://localhost:8764/hi?name=zorke)<br>
 service-consumer-feign:[http://localhost:8765/hi?name=zorke](http://localhost:8765/hi?name=zorke)<br>
 <br>
 zuul-api:[http://localhost:8769/api-a/hi?name=zorke&token=22](http://localhost:8769/api-a/hi?name=zorke&token=22)<br>
 <br>
-sleuth-zipkin-server:[http://localhost:9411/zipkin/](http://localhost:9411/zipkin/) 点击“查找”可以查看服务调用链-可先访问zuul-api
-再查看，实际显示的时间略微延迟滞后些<br>
+

@@ -12,11 +12,16 @@ server:
 spring:
   application:
     name: zuul
+  zipkin:
+      base-url: http://localhost:9411
 
 # 路由配置实现zuul的路由作用功能
 zuul:
   routes:
-    # 以/api-a/ 开头的请求都转发给service-consumer-ribbon服务
+    # 以/api/ 开头的请求都转发给service-provider服务
+    api:
+        path: /api/**
+        serviceId: service-provider
     api-a:
       path: /api-a/**
       serviceId: service-consumer-ribbon

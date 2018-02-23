@@ -33,21 +33,17 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <!--for rabbitmq动态实现配置文件的刷新-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
-
+        <!--eureka客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
+        <!--zuul路由网关-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
-
+        <!--springboot web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -59,11 +55,25 @@
             <scope>test</scope>
         </dependency>
 
-        <!--lombok-->
+        <!--使用zipkin用以记录调用链-->
+        <!--注意：依赖lombok和bus-amqp会导致zipkin中无法追踪该服务，zipkin不起作用，暂未找到根本原因和解决办法-->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+
+        <!--以下两个依赖lombok和bus-amqp会导致spring-cloud-starter-zipkin不起作用，暂未找到根本原因和解决办法-->
+        <!--lombok-->
+         <!--<dependency>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
+         </dependency>-->
+        <!--for rabbitmq动态实现配置文件的刷新-->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>-->
+
     </dependencies>
 
     <dependencyManagement>
