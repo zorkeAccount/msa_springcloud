@@ -1,3 +1,5 @@
+# 启动命令  nohup java -jar -Dspring.config.location=application-zipkin.yml sleuth-zipkin-server-1.0.0.jar >/dev/null &
+
 server:
   port: 9411
 spring:

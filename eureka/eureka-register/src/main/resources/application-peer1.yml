@@ -1,4 +1,6 @@
 # 启动命令 java -jar eureka-register-1.0.0.jar --spring.profiles.active=peer1
+# 启动命令  nohup java -jar -Dspring.config.location=application-peer1.yml eureka-server-1.0.0.jar >/dev/null &
+
 #eureka server url-post
 server:
   port: 8761
